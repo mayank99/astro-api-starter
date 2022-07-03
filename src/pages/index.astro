@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Astro API starter</title>
+</head>
+
+<body>
+	<h1>Hello!</h1>
+	<main>
+		<p>
+			Try navigating to
+			<a href='/api'><code>/api</code></a>
+			or
+			<a href={`/api/${Math.round(Math.random() * 100)}`}><code>/api/[param]</code></a>
+			to see the server-side stuff in action.
+		</p>
+		<p>
+			The <code>/api</code> route is a simple <code>.astro</code> file which returns a static Response in the
+			frontmatter. The <code>/api/[param]</code> route is a <code>.ts</code> file which returns the url params that you
+			passed in.
+		</p>
+	</main>
+</body>
+
+<style is:global>
+	*,
+	*::before,
+	*::after {
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		color-scheme: light dark;
+		font-family: system-ui, sans-serif;
+		height: 100%;
+	}
+</style>
+
+<style>
+	body {
+		display: grid;
+		gap: 1rem;
+		place-content: center;
+	}
+
+	p {
+		font-style: italic;
+		font-size: 1.2rem;
+	}
+
+	main {
+		display: grid;
+		gap: 1rem;
+		max-width: min(65ch, 90vw);
+	}
+</style>
+
+</html>
